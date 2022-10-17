@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>abc</title>
+</head>
+<body bgcolor="gray">
+<form id="bio" onsubmit="return fun()">
+	<table   width="50%">
+	<tr>
+		
+		<td colspan="2" align="center" bgcolor="gray" ><font color="blue"><h2> Form Validation</h2></font></td>
+	</tr>
+	<tr>  
+		<td bgcolor="gray"><b>Enter Name:</b> </td>
+		<td><input type="text" name="name" size="30" required></td>
+	</tr>
+	<tr> 
+<td bgcolor="gray"> <b>Enter Email:</b> </td>
+<td> <input type="email" name="email" size="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required> </td>
+</tr>
+	<tr>
+<td bgcolor="gray"><b>Location: </b> </td>
+<td> <select name="location" id="location" style="width:210px;" required>
+		    <option value="">Select Location</option>
+			<option value="burdwan">Burdwan </option>
+			<option value="asansol">Asansol</option>
+			<option value="kalna">Kalna</option>
+			<option value="katwa">Katwa</option>
+	</select> </td>
+</tr>
+<tr>  
+<td bgcolor="gray"> <b>Enter Phone No:</b> </td>
+<td> <input type="number" name="phone" id="phone" size="30"> <span id="s2"></span></td>
+</tr>
+
+<td bgcolor="gray"><b>Enter Date of Birth:</b>  </td>
+<td> <input type="date" name="dob" style="width:200px;"> </td>
+</tr>
+
+
+
+
+
+<tr> 
+<td colspan="2" align="center" bgcolor="gray"><input type="submit" name="submit" id="b1" value="Submit" > <input type="reset" name="reset" id="b2" value="Reset"></td>
+</tr>
+</table>
+</form>
+<script type="text/javascript">
+	function fun(){
+		b=document.getElementById("phone").value;
+if(b=="")
+{
+	document.getElementById("s2").innerHTML='**please enter your mobile';
+	document.getElementById("s2").style.color="red";
+	return false;
+	}
+	else if(b.length<10)
+{
+	document.getElementById("s2").innerHTML='**enter 10 digits mobile numbers';
+	document.getElementById("s2").style.color="red";
+	return false;
+	}
+	else if(b.length>10)
+{
+	document.getElementById("s2").innerHTML='**enter 10 digits mobile numbers';
+	document.getElementById("s2").style.color="red";
+	return false;
+	}
+	else if(isNaN(b))
+{
+	document.getElementById("s2").innerHTML='**please enter only numbers';
+	document.getElementById("s2").style.color="red";
+	return false;
+	}
+	else if((b.charAt(0)!=9) && (b.charAt(0)!=8) && (b.charAt(0)!=7) && (b.charAt(0)!=6))
+{
+	document.getElementById("s2").innerHTML='**please enter correct number';
+	document.getElementById("s2").fontSize="small";
+	// document.getElementById("s2").style.fontFamily = "Courier New"
+	document.getElementById("s2").style.color="red";
+	return false;
+	}
+
+
+	}
+
+
+
+</script>
+<style type="text/css">
+#bio{
+	
+	font-size: 20px;
+}
+#b1 {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#b2 {
+  background-color: #008CBA; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+</body>
+</html>

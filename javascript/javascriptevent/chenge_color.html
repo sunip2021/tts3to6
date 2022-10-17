@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript</title>
+</head>
+<body id="b1">
+	<form >
+		Choose color:
+		<select  id="s1" onchange="fun()">
+			<option>Select Color</option>
+			<option value="red" >Red</option>
+			<option value="green">Green</option>
+			<option value="blue">Blue</option>
+			<option value="yellow">Yellow</option>
+			
+		</select>
+
+	</form>
+
+<script type="text/javascript">
+function fun()
+{
+
+a=document.getElementById("s1").value;
+// document.write(a);
+
+ document.getElementById("s1").style.backgroundColor = a; 
+}
+</script>
+</body>
+</html>

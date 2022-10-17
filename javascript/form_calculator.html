@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form</title>
+</head>
+<body>
+	<form  >
+		Enter number:<input type="text" id="f11"><br><br>
+		Enter number:<input type="text" id="f12"><br><br>
+
+<input type="submit" name="submit" value="sum" onclick="sum()">&nbsp
+
+<input type="submit" name="submit" value="sub" onclick="sub()">&nbsp
+
+<input type="submit" name="submit" value="mult" onclick="mult()">&nbsp
+<input type="submit" name="submit" value="div" onclick="div()">
+	</form>
+<script type="text/javascript">
+function sum(){
+	a=parseInt(document.getElementById("f11").value);
+	b=parseInt(document.getElementById("f12").value);
+
+document.write("sum is"+(a+b));
+
+}
+function sub(){
+	
+a=parseInt(document.getElementById("f11").value);
+	b=parseInt(document.getElementById("f12").value);
+
+document.write("subtraction is"+(a-b));
+
+}
+function mult(){
+	
+a=parseInt(document.getElementById("f11").value);
+	b=parseInt(document.getElementById("f12").value);
+
+document.write("multiplication is"+(a*b));
+
+}
+function div(){
+	
+a=parseInt(document.getElementById("f11").value);
+	b=parseInt(document.getElementById("f12").value);
+
+document.write("division is"+(a/b));
+
+}
+</script>
+</body>
+</html>

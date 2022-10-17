@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jqueryvalidation</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+Enter mobile number:<input type="text" id="mobile" name=""><br><br>
+<input type="button" id="b1" name="" value="click to validate">
+<p id="result"></p>
+<script type="text/javascript">
+$("document").ready(function(){
+	$("#b1").click(function(){
+		var a=$("#mobile").val();
+		if(a!=""){
+			if(a.length==10)
+			{
+				if(isNaN(a))
+				{
+					$("#result").html("please fill only number");
+				}
+				else
+				{
+					$("#result").html("correct mobile number");
+				}
+			}
+			else
+			{
+				$("#result").html("please fill 10 digit mobile number");
+			}
+		}
+		else
+		{
+			$("#result").html("please fill");
+		}
+	});
+});
+</script>
+</body>
+</html>

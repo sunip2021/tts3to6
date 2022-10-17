@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<form >
+		<table cellpadding="0" cellspacing="0" width="50%">
+			<tr>
+			<td ><textarea rows="4" cols="100" id="f11" ></textarea></td>
+		</tr>
+<tr>
+	<td align="center">
+		<input type="radio" id="on" name="on" value="on" onclick="fun1()">ON &nbsp&nbsp
+<input type="radio" id="off" name="on" value="off" onclick="fun2()">OFF &nbsp&nbsp
+
+	</td>
+	
+</tr>
+		</table>
+		
+		
+		
+
+
+	</form>
+<script type="text/javascript">
+function fun1(){
+	a=document.getElementById("on").value;
+	if(a=="on"){
+		document.getElementById("f11").style.backgroundColor="red"
+	}
+
+}
+function fun2(){
+	b=document.getElementById("off").value;
+	if(b=="off"){
+		document.getElementById("f11").style.backgroundColor="white"
+	}
+
+}
+</script>
+</body>
+</html>

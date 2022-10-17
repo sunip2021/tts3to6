@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>abc</title>
+</head>
+<body>
+<form onsubmit="return fun()">
+	Name<input type="text" id="name" name="" required>
+	<span id="s1"></span><br><br>
+	Email<input type="text" id="email" name="" pattern="[a-z 0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+	<span id="s2"></span><br><br>
+	Password<input type="text" id="password" name="" >
+		<span id="s3"></span><br><br>
+	Address<input type="text" id="address" name="" required>
+		<span id="s4"></span><br><br>
+	<input type="submit" name="submit" value="submit">
+</form>
+<script type="text/javascript">
+	function fun()
+	{
+		if(document.getElementById("email").pattern==false)
+		{
+			a=document.getElementById("email").pattern;
+document.getElementById("s2").innerHTML=a;
+		}
+	
+	
+		b=document.getElementById("password").value;
+		
+		
+// document.write(a);
+if(b=="")
+{
+	document.getElementById("s3").innerHTML='**please enter your password';
+	document.getElementById("s3").style.color="red";
+	return false;
+	}
+	if(b.length<8)
+{
+	document.getElementById("s3").innerHTML='**enter 8 digits password';
+	document.getElementById("s3").style.color="red";
+	return false;
+	}
+	if(b.search(/[A-Z]/)==-1)
+{
+	document.getElementById("s3").innerHTML='**minimum one uppercase value';
+	document.getElementById("s3").style.color="red";
+	return false;
+	}
+	if(b.search(/[a-z]/)==-1)
+{
+	document.getElementById("s3").innerHTML='**minimum one lowercase value';
+	document.getElementById("s3").style.color="red";
+	return false;
+	}
+	if(b.search(/[0-9]/)==-1)
+{
+	document.getElementById("s3").innerHTML='**minimum one numeric value';
+	document.getElementById("s3").style.color="red";
+	return false;
+	}
+	if(b.search(/[#$&@]/)==-1)
+{
+	document.getElementById("s3").innerHTML='**minimum one special character';
+	document.getElementById("s3").style.color="red";
+	return false;
+	}
+	
+}
+
+</script>
+</body>
+</html>

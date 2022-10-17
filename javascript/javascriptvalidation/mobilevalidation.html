@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>abc</title>
+</head>
+<body>
+<form onsubmit="return fun()">
+	enter mobile:<input type="text" id="mobile" name="">
+
+	
+	<span id="s1"></span><br>
+	<input type="submit" name="submit" value="submit">
+</form>
+<script type="text/javascript">
+	function fun()
+	{
+		a=document.getElementById("mobile").value;
+// document.write(a);
+if(a=="")
+{
+	document.getElementById("s1").innerHTML='**please enter your mobile';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	if(a.length<10)
+{
+	document.getElementById("s1").innerHTML='**enter 10 digits mobile numbers';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	if(a.length>10)
+{
+	document.getElementById("s1").innerHTML='**enter 10 digits mobile numbers';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	if(isNaN(a))
+{
+	document.getElementById("s1").innerHTML='**please enter only numbers';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	if((a.charAt(0)!=9) && (a.charAt(0)!=8) && (a.charAt(0)!=7) && (a.charAt(0)!=6))
+{
+	document.getElementById("s1").innerHTML='**please enter correct number';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+
+	
+}
+
+</script>
+</body>
+</html>

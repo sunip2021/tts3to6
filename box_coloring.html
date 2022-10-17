@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<form >
+		<table cellpadding="0" cellspacing="0" width="50%">
+			<tr>
+			<td ><textarea rows="4" cols="100" id="f11" ></textarea></td>
+		</tr>
+<tr>
+	<td align="center">
+		<input type="button" name="submit" value="red" id="red" onclick="fun1()">&nbsp
+
+<input type="button" name="submit" id="green" value="Green" onclick="fun2()">&nbsp
+
+<input type="button" name="submit" id="blue" value="Blue" onclick="fun3()">&nbsp
+<input type="button" name="submit" id="pink" value="Pink" onclick="fun4()">
+
+	</td>
+	
+</tr>
+		</table>
+		
+		
+		
+
+
+	</form>
+<script type="text/javascript">
+function fun1(){
+	a=document.getElementById("red").value;
+document.getElementById("f11").style.backgroundColor= a; 
+}
+function fun2(){
+	a=document.getElementById("green").value;
+document.getElementById("f11").style.backgroundColor= a; 
+}
+function fun3(){
+	a=document.getElementById("blue").value;
+document.getElementById("f11").style.backgroundColor= a; 
+}
+function fun4(){
+	a=document.getElementById("pink").value;
+document.getElementById("f11").style.backgroundColor= a; 
+}
+</script>
+</body>
+</html>

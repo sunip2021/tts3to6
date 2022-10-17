@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>abc</title>
+</head>
+<body>
+<form onsubmit="return fun()">
+	enter password<input type="text" id="password" name="">
+	<span id="s1"></span><br><br>
+	<input type="submit" name="submit" value="submit">
+</form>
+<script type="text/javascript">
+	function fun()
+	{
+		a=document.getElementById("password").value;
+// document.write(a);
+if(a.length<=4)
+{
+	document.getElementById("s1").innerHTML='**Weak password';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	if(a.length>4 && a.length<=8)
+{
+	document.getElementById("s1").innerHTML='**Normal password';
+	document.getElementById("s1").style.color="orange";
+	return false;
+	}
+	if(a.length>8)
+{
+	document.getElementById("s1").innerHTML='**Storang password';
+	document.getElementById("s1").style.color="green";
+	return false;
+	}
+	
+	
+	
+}
+
+</script>
+</body>
+</html>

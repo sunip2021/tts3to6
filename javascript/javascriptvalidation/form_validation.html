@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Validation</title>
+</head>
+<body>
+	
+		<form onsubmit="return fun()">
+<table  border="1" width="50%" cellpadding="" cellspacing="">
+	<tr>
+		
+		<td colspan="2" align="center" bgcolor="gray" ><font color="blue"><h2> Registration Form</h2></font></td>
+	</tr>
+	<tr>  
+		<td bgcolor="gray"> Enter Name:</td>
+		<td><input type="text" name="name" required></td>
+
+	</tr>
+	<tr> 
+		<td bgcolor="gray"> Enter Address1:</td>
+		<td><input type="text" name=""></td>
+	</tr>
+<tr> 
+
+	<td bgcolor="gray"> Enter Address2:</td>
+	<td><textarea name="address2"></textarea> </td>
+</tr>
+<tr> 
+<td bgcolor="gray"> Enter Email: </td>
+<td> <input type="email" id="email" name="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required></td>
+
+</tr>
+<tr> 
+
+<td bgcolor="gray"> Enter Password: </td>
+<td><input type="password" id="password" name="password"> 
+<span id="s1"></span><br></td>
+</tr>
+<tr>  
+<td bgcolor="gray"> Enter Mobile No: </td>	
+<td> <input type="text" id="mobile" name="mobile"> <span id="s2"></span><br></td>
+
+</tr>
+<tr> 
+<td bgcolor="gray">Enter DOB:  </td>
+<td> <input type="date" name="dob"> </td>
+
+
+</tr>
+<tr>  
+<td bgcolor="gray"> Enter Gender: </td>
+<td> <input type="radio" name="gender">Male
+			     <input type="radio" name="gender">Female </td>
+
+</tr>
+
+<tr>
+<td bgcolor="gray">Degree:  </td>
+<td> <select name="degree">
+		    <option>Select Degree</option>
+			<option>B.Tech</option>
+			<option>M.Tech</option>
+			<option>B.Sc.</option>
+	</select> </td>
+
+</tr>
+
+<tr>  
+<td bgcolor="gray">  language:</td>
+<td>  <input type="checkbox" name="language[]">Hindi
+          <input type="checkbox" name="language[]">Bengali
+          <input type="checkbox" name="language[]">English </td>
+
+
+</tr>
+<tr>  
+<td bgcolor="gray">image: </td>
+<td><input type="file" name="uploadimage"> </td>
+
+</tr>
+<tr> 
+
+<td colspan="2" align="center" bgcolor="gray"><input type="submit" name="submit" value="Submit" > <input type="reset" name="reset" value="Reset"></td>
+
+
+</tr>
+		     
+</table>
+</form >
+	<script type="text/javascript">
+		function fun()
+	{
+		a=document.getElementById("password").value;
+		b=document.getElementById("mobile").value;
+		console.log(a);
+		console.log(b);
+// document.write(a);
+if(a=="")
+{
+	document.getElementById("s1").innerHTML='**please enter your password';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	else if(a.length<8)
+{
+	document.getElementById("s1").innerHTML='**enter 8 digits password';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	else if(a.search(/[A-Z]/)==-1)
+{
+	document.getElementById("s1").innerHTML='**minimum one uppercase value';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	else if(a.search(/[a-z]/)==-1)
+{
+	document.getElementById("s1").innerHTML='**minimum one lowercase value';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	else if(a.search(/[0-9]/)==-1)
+{
+	document.getElementById("s1").innerHTML='**minimum one numeric value';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	else if(a.search(/[#$&@]/)==-1)
+{
+	document.getElementById("s1").innerHTML='**minimum one special character';
+	document.getElementById("s1").style.color="red";
+	return false;
+	}
+	
+		
+
+else if(b=="")
+{
+	document.getElementById("s2").innerHTML='**please enter your mobile';
+	document.getElementById("s2").style.color="red";
+	return false;
+	}
+	else if(b.length<10)
+{
+	document.getElementById("s2").innerHTML='**enter 10 digits mobile numbers';
+	document.getElementById("s2").style.color="red";
+	return false;
+	}
+	else if(b.length>10)
+{
+	document.getElementById("s2").innerHTML='**enter 10 digits mobile numbers';
+	document.getElementById("s2").style.color="red";
+	return false;
+	}
+	else if(isNaN(b))
+{
+	document.getElementById("s2").innerHTML='**please enter only numbers';
+	document.getElementById("s2").style.color="red";
+	return false;
+	}
+	else if((b.charAt(0)!=9) && (b.charAt(0)!=8) && (b.charAt(0)!=7) && (b.charAt(0)!=6))
+{
+	document.getElementById("s2").innerHTML='**please enter correct number';
+	document.getElementById("s2").style.color="red";
+	return false;
+	}
+	
+	
+}
+
+	</script>
+
+
+</body>
+</html>

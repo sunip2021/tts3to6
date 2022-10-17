@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>color</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" width="50%">
+			<tr>
+			<td ><textarea rows="4" cols="100" id="f11" ></textarea></td>
+		</tr>
+<tr>
+	<td align="center">
+		<input type="button" name="" value="red" id="b1" >&nbsp
+
+<input type="button" name="" id="b2" value="green" >&nbsp
+
+<input type="button" name="" id="b3" value="blue" >&nbsp
+<input type="button" name="" id="b4" value="orange" >
+
+	</td>
+	
+</tr>
+		</table>
+		<script type="text/javascript">
+			$("document").ready(function(){
+				$("#b1").click(function(){
+					var color=$("#b1").val();
+					$("#f11").css("background-color",color);
+				});
+				$("#b2").click(function(){
+					var color=$("#b2").val();
+					$("#f11").css("background-color",color);
+				});
+				$("#b3").click(function(){
+					var color=$("#b3").val();
+					$("#f11").css("background-color",color);
+				});
+				$("#b4").click(function(){
+					var color=$("#b4").val();
+					$("#f11").css("background-color",color);
+				});
+			});
+
+		</script>
+
+</body>
+</html>

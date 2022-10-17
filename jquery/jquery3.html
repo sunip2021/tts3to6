@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>abc</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	enter name:<input type="text" id="name" name=""><br>
+	enter address:<input type="text" id="address" name=""><br>
+	<input type="submit" id="submit" name="" value="submit">
+
+
+<script type="text/javascript">
+$("document").ready(function(){
+$("#submit").click(function(){
+ 	var nme=$("#name").val();
+ 	var add=$("#address").val();
+ 	document.write("My name is: " +nme+"<br>");
+ 	document.write("My address is: "+add);
+});
+});
+
+</script>
+
+<style type="text/css">
+
+</style>
+</body>
+</html>
